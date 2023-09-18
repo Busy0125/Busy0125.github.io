@@ -1,0 +1,70 @@
+@import url("root.css");
+
+.container{
+    margin: 20px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 不够装了可以折行 */
+}
+
+.card-01{
+    background: var(--third-color);
+    position: relative;
+    flex: 1; /* 就算有多余空间，也要撑满 */
+    max-width: 300px;
+    /* height: 150px; */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    padding: 10px 0;
+}
+
+.card-02{
+    background: var(--fourth-color);
+    position: relative;
+    flex: 1; /* 就算有多余空间，也要撑满 */
+    max-width: 460px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    padding: 10px 0;
+}
+
+.card-03{
+    background: var(--fifth-color);
+    position: relative;
+    flex: 1; /* 就算有多余空间，也要撑满 */
+    max-width: 940px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    padding: 10px 0;
+}
+
+/* 媒体查询*/
+/* 当媒体设备的宽度为800px或更小时 */
+@media (max-width:800px){
+    .card-01{
+        flex: 100%;
+        max-width: 600px;
+    }
+
+    .card-02{
+        flex: 100%;
+        max-width: 600px;
+    }
+
+    .card-03{
+        flex: 100%;
+        max-width: 600px;
+    }
+}

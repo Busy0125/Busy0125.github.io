@@ -2,69 +2,67 @@
 
 .container{
     margin: 20px;
+    display: flex;
 }
 
-.row{
-    width: 100%;
+.dashboard{
+    background: var(--first-color);
+    width: 15%;
+    border-radius: 30px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.market{
+    background: var(--first-color);
+    width: 85%;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.dashboard-item{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.2em;
+
+    margin: 20px 5px;
+    padding: 5px 5px 5px 20px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.dashboard-item:hover{
+    background: var(--third-color);
+}
+
+.market-item{
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.market-link{
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* 不够装了可以折行 */
+    align-items: center;
+
+    transition: 0.3s ease;
+
+    background: var(--second-color);
+    color: var(--text-color);
+
+    font-size: 1.3em;
 }
 
-.card-01{
-    background: var(--third-color);
-    position: relative;
-    flex: 1; /* 就算有多余空间，也要撑满 */
-    max-width: 300px;
-    /* height: 150px; */
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-    padding: 10px 0;
-}
-
-.card-02{
-    background: var(--fourth-color);
-    position: relative;
-    flex: 1; /* 就算有多余空间，也要撑满 */
-    max-width: 460px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-    padding: 10px 0;
-}
-
-.card-03{
-    background: var(--fifth-color);
-    position: relative;
-    flex: 1; /* 就算有多余空间，也要撑满 */
-    max-width: 940px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-    padding: 10px 0;
-}
-
-/* 媒体查询*/
-/* 当媒体设备的宽度为800px或更小时 */
-@media (max-width:800px){
-    .card-01{
-        flex: 100%;
-        max-width: 600px;
-    }
-
-    .card-02{
-        flex: 100%;
-        max-width: 600px;
-    }
-
-    .card-03{
-        flex: 100%;
-        max-width: 600px;
-    }
+.market-link:hover{
+    box-shadow: 0 0 15px var(--text-color);
 }
